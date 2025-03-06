@@ -1,17 +1,25 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function Header() {
+const Header = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hey, its header file!</Text>
+    <View style={styles.header}>
+      <Text style={styles.headerText}>My App</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: yellow,
-    alignItems: 'center',
-    justifyContent: 'center',
+  header: {
+    backgroundColor: "#007bff",
+    padding: 20,
+    alignItems: "center",
+  },
+  headerText: {
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
   },
 });
+
+export default Header;
